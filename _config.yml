@@ -1,6 +1,6 @@
 # Site settings
 title: Along Came Ruby
-header-img: img/home-bg.png
+header-img: img/banners/home-bg.png
 email: antonio.david.us@gmail.com
 copyright_name: Antonio David
 description: > # this means to ignore newlines until "baseurl:"
@@ -9,6 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: adavid128
 github_username:  agdavid
 learn_profile: agdavid
+instagram_username: adavid128
 email_username: antonio.david.us@gmail.com
 
 # Build settings

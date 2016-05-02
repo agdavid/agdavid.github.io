@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Hello World! My Journey Into Coding
-date:   2016-05-02 14:19:16 +0000
+title:  My Journey Into Coding
+date:   2016-05-02 14:20:43 +0000
 ---
 
 

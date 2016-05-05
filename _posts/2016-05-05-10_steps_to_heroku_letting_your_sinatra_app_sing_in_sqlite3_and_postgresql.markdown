@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  10 Steps to Heroku - Letting Sinatra Sing in SQLite3 and PostgreSQL
-date:   2016-05-05 18:05:54 +0000
+date:   2016-05-05 18:11:50 +0000
 ---
 
 *The Situation:* You built a Sinatra application using SQLite3 as your database and it works perfectly on your local computer. You are excited and want the world to see it in all its glory! You decide to deploy. 
@@ -21,7 +21,9 @@ Remember throughout this process: commit and commit often to save your progress 
 
 1) **Add a Procfile** - In your top-level directory, add a file named "Procfile" with the following command: 
 
-```web: bundle exec rackup config.ru -p $PORT`
+```
+web: bundle exec rackup config.ru -p $PORT
+```
 
 This says that you want to run a web process with the command on the port that Heroku gives you, using the bundle environment given.  The "rackup" command to find the "config.ru" file should make sense since it is how we start Rack-based frameworks like Sinatra.
 
@@ -97,8 +99,7 @@ For my peers in [Learn Verified](https://learn.co/verified), the above should lo
 
 
 ***Beginner Tip: Pause, Breath, Learn About Heroku***: 
-*At this point, your Sinatra application is almost configured for Heroku. I highly recommend pausing and learning about Heroku by going through their ["Getting Started With Ruby"](https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction) learning module. This will get you to install and be familiar with the Heroku Toolbelt -  also it's fun!*
-
+At this point, your Sinatra application is almost configured for Heroku. I highly recommend pausing and learning about Heroku by going through their [Getting Started With Ruby](https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction) learning module. This will get you to install and be familiar with the Heroku Toolbelt -  also it's fun!
 
 
 
@@ -106,9 +107,12 @@ For my peers in [Learn Verified](https://learn.co/verified), the above should lo
 
 In your top-level directory, create the Heroku app by entering the following command in terminal:
 
+
 ```
-heroku create <your-app-name>
+heroku create your-app-name
 ```
+
+
 In my case I entered *heroku create sightseedc* and it generated the URL [https://sightseedc.herokuapp.com/](https://sightseedc.herokuapp.com/).
 
 6) **Push Your Application Files to Heroku**
@@ -119,11 +123,13 @@ In your top-level directory, push your entire application to Heroku by entering 
 git push heroku master
 ```
 
+
 Checkout your application live on Heroku by entering in terminal:
 
 ```
 heroku open
 ```
+
 
 There's an error!?!? This is OK. See below.
 
@@ -135,6 +141,7 @@ Get the PostgreSQL addon by entering the following command in terminal and **kee
 heroku addons:create heroku-postgresql:hobby-dev
 ```
 
+
 This gets you the free Heroku hobby-dev database and provides the Heroku URL for your database. In my case, I received: HEROKU_POSTGRESQL_CRIMSON_URL
 
 8) **Add .env File**
@@ -144,6 +151,7 @@ In the top-level directory, add a file called ".env".  In that file, set the env
 ```
 DATABASE_URL=HEROKU_POSTGRESQL_CRIMSON_URL
 ```
+
 
 Everytime the application hits ENV['DATABASE_URL] in "config/environment.rb", it will insert the above value and properly reach the location of your PostgreSQL database on Heroku. 
 
@@ -156,6 +164,7 @@ heroku run rake db:migrate
 heroku run rake db:seed
 ```
 
+
 Save and push the updated application up to Heroku:
 
 ```
@@ -164,9 +173,16 @@ git commit -m "my app for deployment on Heroku"
 git push heroku master
 ```
 
+
 10) **Enjoy Your Live Application!**
 
-Checkout your live application using ```heroku open``` and email the URL to everyone you know!
+Checkout your live application using:
+```
+heroku open
+```
+
+Email the URL to everyone you know!
+
 
 For those interested in reviewing or comparing code:
 - Heroku app: [SightSeeDC](https://sightseedc.herokuapp.com/)

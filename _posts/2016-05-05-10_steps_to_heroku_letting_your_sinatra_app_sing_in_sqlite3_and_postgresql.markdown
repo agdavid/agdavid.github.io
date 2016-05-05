@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  10 Steps to Heroku - Letting Sinatra Sing in SQLite3 and PostgreSQL
-date:   2016-05-05 18:13:05 +0000
+date:   2016-05-05 22:07:03 +0000
 ---
 
 *The Situation:* You built a Sinatra application using SQLite3 as your database and it works perfectly on your local computer. You are excited and want the world to see it in all its glory! You decide to deploy. 

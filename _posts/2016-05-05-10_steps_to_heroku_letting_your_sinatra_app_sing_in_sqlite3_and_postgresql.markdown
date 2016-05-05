@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  10 Steps to Heroku - Letting Sinatra Sing in SQLite3 and PostgreSQL
-date:   2016-05-05 18:00:40 +0000
+date:   2016-05-05 18:01:11 +0000
 ---
 
 *The Situation:* You built a Sinatra application using SQLite3 as your database and it works perfectly on your local computer. You are excited and want the world to see it in all its glory! You decide to deploy. 
 
 
-*The Problem:* You see this post on the Heroku DevCenter: [**You cannot use sqlite on Heroku**](https://devcenter.heroku.com/articles/sqlite3):
-> SQLite is ideal for users getting started since it can be run in memory and backed by small files on disk that are easily created and moved around. >While easy to use, SQLite is not intended as a production grade database. Instead Heroku provides production grade PostgreSQL databases as a >service.
+*The Problem:* You see this post on the Heroku DevCenter: [**You cannot use sqlite on Heroku**](https://devcenter.heroku.com/articles/sqlite3).
 
 
 *The Solution:* Below are the 10 steps I went through to reconfigure my Sinatra application so that it could use SQLite3 in development locally and PostgreSQL in production on Heroku.  

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  10 Steps to Heroku - Letting Sinatra Sing in SQLite3 and PostgreSQL
-date:   2016-05-05 22:07:03 +0000
+date:   2016-05-06 22:31:20 +0000
 ---
 
 *The Situation:* You built a Sinatra application using SQLite3 as your database and it works perfectly on your local computer. You are excited and want the world to see it in all its glory! You decide to deploy. 
@@ -17,7 +17,7 @@ Remember throughout this process: commit and commit often to save your progress 
 
 
 
-**10 Steps to Heroku**
+**10 Steps to Deploying on Heroku**
 
 1) **Add a Procfile** - In your top-level directory, add a file named "Procfile" with the following command: 
 
@@ -113,7 +113,7 @@ heroku create your-app-name
 ```
 
 
-In my case I entered *heroku create sightseedc* and it generated the URL [https://sightseedc.herokuapp.com/](https://sightseedc.herokuapp.com/).
+In my case I entered *heroku create sightseedc-sinatra* and it generated the URL [https://sightseedc-sinatra.herokuapp.com/](https://sightseedc-sinatra.herokuapp.com/).
 
 6) **Push Your Application Files to Heroku**
 
@@ -187,6 +187,6 @@ Email the URL to everyone you know!
 
 
 For those interested in reviewing or comparing code:
-- Heroku app: [SightSeeDC](https://sightseedc.herokuapp.com/)
+- Heroku app: [SightSeeDC](https://sightseedc-sinatra.herokuapp.com/)
 - Git repo: [Original SQLite3 version](https://github.com/agdavid/see-dc-sinatra-application)
 - Git repo: [Heroku PostgreSQL version](https://github.com/agdavid/sight-see-dc-sinatra-application-heroku)

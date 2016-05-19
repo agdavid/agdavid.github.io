@@ -12,7 +12,7 @@ Cooking is one of the daily experiences I really enjoy - it is family-centric, r
 **Key Database Relationships**
 AFM began as a simple application, but as the features I wanted to create grew, it blossomed into a database with nine (9) tables, including four (4) join tables.  The key join-relationships are outlined below:
 
-* *Items - Ingredients - Recipes*
+*Items - Ingredients - Recipes*
 This is the heart of the application, managing the feature that most users might look for - the ability to create a recipe. A Recipe and Item are connected through the join-table of Ingredients, and the join-table contains the extra attribute of "quantity".  As explained further in "Highlights of Coding Challenges" (below), this relationship led to a deeply-nested form and required a custom writer in the Recipe model to handle Ingredients and Items when instantiating a new Recipe.  The model relationships were as follows:
 
 ```
@@ -39,7 +39,7 @@ class Item < ActiveRecord::Base
 end
 ```
 
-* *Users - FavoriteRecipes - Recipes*
+*Users - FavoriteRecipes - Recipes*
 This relationship creates a higher-fidelity experience by allowing a user to save recipes to a collection, creating a virtual "recipe-box" to track their favorite meals. The ActiveRecord relationships use terminology that evokes the relationship between a user and recipe. For example, to get a list of a user's favorite recipes call `@user.favorites` and to get a list of users that added a recipe to their favorites call `@recipe.favorited_by`.  The model relationships were as follows:
 
 ```
@@ -65,7 +65,7 @@ belongs_to :user
 end
 ```
 
-* *Allergens - RecipeAllergens - Recipes*
+*Allergens - RecipeAllergens - Recipes*
 This relationship powers the key search feature which allows a user to filter recipes by allergen - allowing you to declare which allergens to avoid in a recipe. The model relationships were as follows:
 
 ```

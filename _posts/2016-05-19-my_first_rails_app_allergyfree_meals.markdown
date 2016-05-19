@@ -39,7 +39,7 @@ class Item < ActiveRecord::Base
 end
 ```
 
-3. *Users - FavoriteRecipes - Recipes*
+2. *Users - FavoriteRecipes - Recipes*
 This relationship creates a higher-fidelity experience by allowing a user to save recipes to a collection, creating a virtual "recipe-box" to track their favorite meals. The ActiveRecord relationships use terminology that evokes the relationship between a user and recipe. For example, to get a list of a user's favorite recipes call `@user.favorites` and to get a list of users that added a recipe to their favorites call `@recipe.favorited_by`.  The model relationships were as follows:
 
 ```

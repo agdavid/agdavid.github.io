@@ -23,6 +23,7 @@ class Recipe < ActiveRecord::Base
   accepts_nested_attributes:for :items
 end
 ```
+
 ```
 class Ingredient < ActiveRecord::Base
   belongs_to :recipe
@@ -30,6 +31,7 @@ class Ingredient < ActiveRecord::Base
   accepts_nested_attributes_for :item
 end
 ```
+
 ```
 class Item < ActiveRecord::Base
   has_many :ingredients
@@ -47,12 +49,14 @@ has_many :recipes
   has_many :favorites, through: :favorite_recipes, source: :recipe
 end
 ```
+
 ```
 class FavoriteRecipe < ActiveRecord::Base
   belongs_to :recipe 
   belongs_to :user
 end
 ```
+
 ```
 class Recipe < ActiveRecord::Base
 belongs_to :user
@@ -70,12 +74,14 @@ class Allergen < ActiveRecord::Base
   has_many :recipes, through: :recipe_allergens
 end
 ```
+
 ```
 class RecipeAllergen < ActiveRecord::Base
   belongs_to :recipe 
   belongs_to :allergen 
 end
 ```
+
 ```
 class Recipe < ActiveRecord::Base
   has_many :recipe_allergens

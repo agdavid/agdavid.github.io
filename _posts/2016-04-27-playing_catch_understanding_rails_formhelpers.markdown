@@ -18,7 +18,7 @@ By this, I mean practice a few simple steps of: (1) anticipating the HTML that t
 
 Let’s do an example using a tag of the form_for method and a simple domain of a Book model, where @book instance is being created with a :title attribute.
 
-**What is the View throwing in params?**
+**gWhat is the View throwing in params?**
 
 The abstracted tag of “text_field”…
 

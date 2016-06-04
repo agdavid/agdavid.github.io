@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  My Journey Into Coding
-date:   2016-05-02 14:20:43 +0000
+date:   2016-03-01 14:20:43 +0000
 ---
 
 

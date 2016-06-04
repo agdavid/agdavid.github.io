@@ -25,14 +25,14 @@ The prior version contained two classes – Class Scraper and Class Region.  The
 
 In order to give the user an enhanced experience with more information, I wanted to add the descriptive paragraph for each destination.  I created the Class Destination with three attributes (:name, :region, :description) to achieve this.
 
-**A Region “has-many” Destinations || Destination “belongs-to” a Region**
+**Region “has-many” Destinations and Destination “belongs-to” a Region**
 
- To collaborate, the two classes had to know their relationship. The code snippet below from the Class Region shows how an instance of Destination “belongs-to” an instance of Region, as well as how, each instance of Region “has-many” Destinations:
-
- ```
- def add_destinations(destinations_array) #(1)
+To collaborate, the two classes had to know their relationship. The code snippet below from the Class Region shows how an instance of Destination “belongs-to” an instance of Region, as well as how, each instance of Region “has-many” Destinations:
+ 
+```
+def add_destinations(destinations_array) #(1)
   destinations_array.each do |destination_hash| #(2)
-    destination = TopTravelDestinations::Destination.new(destination_hash) #(3) 
+  destination = TopTravelDestinations::Destination.new(destination_hash) #(3) 
     self.destinations << destination #(4)
     destination.region = self #(5)
   end

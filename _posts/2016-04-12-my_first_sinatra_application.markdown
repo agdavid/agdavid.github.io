@@ -35,11 +35,11 @@ Before creating the custom SightSeeDC application, I created the following gener
 ├── Gemfile
 ```
 
-1. *Main Directory* – I created a directory with the name “see-dc-sinatra-application” to hold all files.
+*Main Directory* – I created a directory with the name “see-dc-sinatra-application” to hold all files.
 
-2. *Gemfile* – From within the main directory, I entered `bundle init` in Terminal to create a Gemfile.
+*Gemfile* – From within the main directory, I entered `bundle init` in Terminal to create a Gemfile.
 
-3. *config.ru* – In the main directory, I created the config.ru which runs the Sinatra application, with the following code:
+*config.ru* – In the main directory, I created the config.ru which runs the Sinatra application, with the following code:
 
 ```
 require './config/environment' #requires environment
@@ -52,7 +52,7 @@ use Rack::MethodOverride #for later use of patch/delete routes
 runApplicationController #mounting main controller
 ```
 
-4. *config/environment.rb* – In the main directory, I created the “config” folder and “environment.rb” file to load dependencies, such as gems, databases, and the MVC files, with the following code:
+*config/environment.rb* – In the main directory, I created the “config” folder and “environment.rb” file to load dependencies, such as gems, databases, and the MVC files, with the following code:
 
 ```
 ENV['SINATRA_ENV'] ||="development"
@@ -68,7 +68,7 @@ ActiveRecord::Base.establish_connection(
 require_all 'app' #require all MVC files in the app folder
 ```
 
-5. *app* – In the main directory, I created the “app” folder to hold the MVC folders of “models”, “views”, and “controllers”.  I added only the folder “controllers” and the file “application_controller.rb” with the following code to run the test application:
+*app* – In the main directory, I created the “app” folder to hold the MVC folders of “models”, “views”, and “controllers”.  I added only the folder “controllers” and the file “application_controller.rb” with the following code to run the test application:
 
 ```
 class ApplicationController < Sinatra::Base
@@ -78,7 +78,7 @@ class ApplicationController < Sinatra::Base
 end
 ```
 
-6. *Rakefile* – In the main directory, I created a “Rakefile” withe the following code to provide access to certain rake tasks:
+*Rakefile* – In the main directory, I created a “Rakefile” withe the following code to provide access to certain rake tasks:
 
 ```
 ENV['SINATRA_ENV'] ||="development"
@@ -87,7 +87,7 @@ require_relative './config/environment'
 require 'sinatra/activerecord/rake' #provide access to activerecord rake tasks
 ```
 
-7. *gems* – I included 11 gems in my Gemfile: sinatra, activerecord, sinatra-activerecord, rake, require_all, sqlite3, thin, shotgun, pry, bcrypt, tux. From within the main directory, I entered `bundle install` to install the gems.
+*gems* – I included 11 gems in my Gemfile: sinatra, activerecord, sinatra-activerecord, rake, require_all, sqlite3, thin, shotgun, pry, bcrypt, tux. From within the main directory, I entered `bundle install` to install the gems.
 
 After completing the above generic structure, I entered `shotgun` from within the main directory. I navigated to the local server (localhost:9393) and confirmed that the main index route (‘/’) was rendering the text “Hello World.”
 
@@ -95,26 +95,35 @@ After completing the above generic structure, I entered `shotgun` from within th
 
 *Models* – The application with users, sights, and reviews created by users that pertain to sights lead to four models:
 
-*class User – has many reviews, has many sights through a join table
-*class Review – belongs to a user, belongs to a sight
-*class Sight – has many reviews, has many users through a join table
-*class UserSight (the join table) – belongs to a user, belongs to a sight
+- class User – has many reviews, has many sights through a join table
+
+- class Review – belongs to a user, belongs to a sight
+
+- class Sight – has many reviews, has many users through a join table
+
+- class UserSight (the join table) – belongs to a user, belongs to a sight
 
 *Migrations* – The table for each model consisted of the following attributes
 
-*users – username, email, password_digest
-*reviews – content, user_id, sight_id
-*sights – name, description
-*user_sights – user_id, sight_id
+- users – username, email, password_digest
+
+- reviews – content, user_id, sight_id
+
+- sights – name, description
+
+- user_sights – user_id, sight_id
 
 **Controllers and RESTful Routing**
 
 I separated concerns between four controllers, as follows:
 
-*ApplicationController – set configurations (e.g., views and public folder), index routes, helper methods
-*UsersController – inherits from ApplicationController, then takes care of sign-up, log-in and log-out, and creating, editing, and showing user sights
-*SightsController – inherits from ApplicationController, then takes care of creating and showing sights
-*ReviewsController – inherits from ApplicationController, then takes care of creating, editing, deleting and showing reviews
+*ApplicationController* – set configurations (e.g., views and public folder), index routes, helper methods
+
+*UsersController* – inherits from ApplicationController, then takes care of sign-up, log-in and log-out, and creating, editing, and showing user sights
+
+*SightsController* – inherits from ApplicationController, then takes care of creating and showing sights
+
+*ReviewsController* – inherits from ApplicationController, then takes care of creating, editing, deleting and showing reviews
 
 Remember, that after creating controllers you must “mount” them in config.ru, as follows:
 
@@ -126,9 +135,12 @@ runApplicationController #mount main controller
 ```
 
 *RESTful Routing.* This is a RESTful application and, where applicable, the controllers have the conventional routes, as follows:
-*UsersController – GET request to render a user show page, GET and POST create requests to render and process a new form for a user’s sightseeing list, GET and PATCH edit requests to render and process an update form for a user’s sightseeing list
-*ReviewsController – GET request to render show pages for all and individual reviews, GET and POST create requests for new reviews, GET and PATCH edit requests for existing reviews, DELETE request for existing reviews
-*SightsController – GET request to render show pages for all and individual sights, GET and POST create requests for new sights
+
+- UsersController – GET request to render a user show page, GET and POST create requests to render and process a new form for a user’s sightseeing list, GET and PATCH edit requests to render and process an update form for a user’s sightseeing list
+
+- ReviewsController – GET request to render show pages for all and individual reviews, GET and POST create requests for new reviews, GET and PATCH edit requests for existing reviews, DELETE request for existing reviews
+
+- SightsController – GET request to render show pages for all and individual sights, GET and POST create requests for new sights
 
 **Views and Bootstrap Framework**
 

@@ -6,6 +6,14 @@ date:   2016-03-14 12:00:00 -0400
 
 My first CLI gem is the top-travel-destinations-cli-gem, available at [RubyGems.org](https://rubygems.org/gems/top-travel-destinations-cli-gem) and with all code publicly available at [GitHub](https://github.com/agdavid/top-travel-destinations-cli-gem).  For a video walkthrough of the gem and an overview of the development process checkout the [YouTube](https://www.youtube.com/watch?v=FS9TE8V_6Gs) video and the post below. Enjoy!
 
+<p>
+  <span class="embed-youtube" style="text-align:center; display: block;">
+    <iframe class="youtube-player" type="text/html" width="682" height="414" src="https://www.youtube.com/embed/FS9TE8V_6Gs?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;">
+    </iframe>
+  </span>
+</p>
+
+
 **Inspiration**
 
 I love to travel.  With that in mind, I decided to make a gem that would assist anyone with wanderlust in getting started with planning their next adventure.  The general idea was to: (1) locate a reputable travel website; (2) identify general travel regions; and (3) list the specific recommended travel destinations within a region. TripAdvisor provided a great place to start with their [“Travelers’ Choice Destinations”](https://www.tripadvisor.com/TravelersChoice) page.

@@ -4,8 +4,6 @@ title:  My First CLI Gem
 date:   2016-03-14 12:00:00 -0400
 ---
 
-My first CLI gem is the top-travel-destinations-cli-gem, available at [RubyGems.org](https://rubygems.org/gems/top-travel-destinations-cli-gem) and with all code publicly available at [GitHub](https://github.com/agdavid/top-travel-destinations-cli-gem).  For a video walkthrough of the gem and an overview of the development process checkout the [YouTube](https://www.youtube.com/watch?v=FS9TE8V_6Gs) video and the post below. Enjoy!
-
 <p>
   <span style="text-align:center; display: block;">
     <iframe type="text/html" width="682" height="414" src="https://www.youtube.com/embed/FS9TE8V_6Gs?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;">
@@ -13,6 +11,7 @@ My first CLI gem is the top-travel-destinations-cli-gem, available at [RubyGems.
   </span>
 </p>
 
+My first CLI gem is the top-travel-destinations-cli-gem, available at [RubyGems.org](https://rubygems.org/gems/top-travel-destinations-cli-gem) and with all code publicly available at [GitHub](https://github.com/agdavid/top-travel-destinations-cli-gem).  Checkout a video walkthrough of the gem above, and an overview of the development process below. Enjoy!
 
 **Inspiration**
 

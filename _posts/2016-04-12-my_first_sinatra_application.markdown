@@ -4,14 +4,14 @@ title:  My First Sinatra Application
 date:   2016-04-12 12:00:00 -0400
 ---
 
-My first Sinatra application is SightSeeDC, a web application that helps you create a customized sightseeing plan for Washington, D.C. and also view the sightseeing plans and reviews of other users.  All code is publicly available at [GitHub](https://github.com/agdavid/see-dc-sinatra-application) and a live version is deployed on [Heroku](http://sightseedc-sinatra.herokuapp.com/).  Below is a video walkthrough of SightSeeDC and an overview of the development process. Enjoy!
-
 <p>
   <span style="text-align:center; display: block;">
     <iframe type="text/html" width="682" height="414" src="https://www.youtube.com/embed/sXplBn7gSdI?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;">  
     </iframe>
   </span>
 </p>
+
+My first Sinatra application is SightSeeDC, a web application that helps you create a customized sightseeing plan for Washington, D.C. and also view the sightseeing plans and reviews of other users.  All code is publicly available at [GitHub](https://github.com/agdavid/see-dc-sinatra-application) and a live version is deployed on [Heroku](http://sightseedc-sinatra.herokuapp.com/).  Above is a video walkthrough of SightSeeDC, and below is an overview of the development process. Enjoy!
 
 **Inspiration for SightSeeDC**
 

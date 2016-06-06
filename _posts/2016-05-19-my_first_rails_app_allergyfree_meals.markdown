@@ -51,7 +51,7 @@ This relationship creates a higher-fidelity experience by allowing a user to sav
 
 ```
 class User < ActiveRecord::Base
-has_many :recipes
+  has_many :recipes
   has_many :favorite_recipes
   has_many :favorites, through: :favorite_recipes, source: :recipe
 end

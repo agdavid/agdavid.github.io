@@ -6,7 +6,7 @@ copyright_name: agdavid
 description: > # this means to ignore newlines until "baseurl:"
   Musings From My Journey With Ruby
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: 
+twitter_username: adavid128
 github_username:  agdavid
 learn_profile: agdavid
 email_username: antonio.g.david@gmail.com

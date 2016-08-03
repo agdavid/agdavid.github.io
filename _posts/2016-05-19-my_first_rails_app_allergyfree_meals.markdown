@@ -11,7 +11,7 @@ date:   2016-05-18 20:49:05 -0400
   </span>
 </p>
 
-My first Rails application is AllergyFree Meals (AFM), a web application that helps you find delicious and healthy recipes contributed by a community of allergy-conscious users.  All code is publicly available at [GitHub](https://github.com/agdavid/allergy-free-meals-rails-application).  Checkout a video walkthrough of AFM above, and and overview of the development process below. Enjoy!
+My first Rails application is AllergyFree Meals (AFM), a web application that helps you find delicious and healthy recipes contributed by a community of allergy-conscious users.  All code is publicly available at [GitHub](https://github.com/agdavid/allergy-free-meals-rails-application).  Checkout a video walkthrough of AFM above, and overview of the development process below. Enjoy!
 
 **Inspiration for AllergyFree Meals**
 Cooking is one of the daily experiences I really enjoy - it is family-centric, relaxing, but also builds up with excitment to the point of eating!  However, with a sibling managing celiac disease and a nephew severely allergic to five of the "big eight" allergens, I am also trying to make sure that dining experiences as a family are always inclusive and allergy conscious.  AFM aims to help us eat smart, eat delicious, but also eat allergy-free.
@@ -177,4 +177,5 @@ end
 ```
 
 Overall, this was a great learning experience for using Rails to build a feature-rich application for the user.  I can't wait to build on this knowledge with increased user-interaction.  ***Up next: Javascript!***
+
 

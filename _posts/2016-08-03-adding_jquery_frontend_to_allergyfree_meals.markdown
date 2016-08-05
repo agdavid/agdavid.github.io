@@ -4,14 +4,14 @@ title:  Rails, JSON and Active Model Serializers - Adding a jQuery Front End
 date:   2016-08-03 20:49:05 -0400
 ---
 
-<!-- <p>
+Since my last [post](http://agdavid.github.io/2016/05/19/my_first_rails_app_allergyfree_meals/) describing the development of AllergyFree Meals (AFM), I expanded on AFM by adding dynamic features through the use of jQuery and a JSON API for the app.  A video walkthrough of the new features is available below and all code is publicly available at [GitHub](https://github.com/agdavid/allergy-free-meals-rails-application).
+
+<p>
   <span style="text-align:center; display: block;">
-    <iframe type="text/html" width="682" height="414" src="https://www.youtube.com/embed/ZEKqQkPs53g?version=1&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;">
+    <iframe type="text/html" width="682" height="414" src="https://youtu.be/9ngnO9sCZGQ?version=1&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;">
     </iframe>
   </span>
-</p> -->
-
-Since my last [post](http://agdavid.github.io/2016/05/19/my_first_rails_app_allergyfree_meals/) describing the development of AllergyFree Meals (AFM), I expanded on AFM by adding dynamic features through the use of jQuery and a JSON API for the app.  A video walkthrough of the new features will be available soon, and all code is publicly available at [GitHub](https://github.com/agdavid/allergy-free-meals-rails-application).
+</p>
 
 I've always known that JavaScript was the means to create dynamic front-ends, but this was a great chance to apply my JS skills and see them in action.  Through this process I was able to render index and show pages via jQuery without a page refresh, create JSON responses using Active Model Serializers (AMS), and translate those JSON responses into JS Model Objects which included methods on the prototype.
 

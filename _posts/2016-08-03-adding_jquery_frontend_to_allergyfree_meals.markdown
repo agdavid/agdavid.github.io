@@ -8,7 +8,7 @@ Since my last [post](http://agdavid.github.io/2016/05/19/my_first_rails_app_alle
 
 <p>
   <span style="text-align:center; display: block;">
-    <iframe type="text/html" width="682" height="414" src="https://youtu.be/9ngnO9sCZGQ?version=1&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;">
+    <iframe type="text/html" width="682" height="414" src="https://www.youtube.com/embed/9ngnO9sCZGQ?version=1&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;">
     </iframe>
   </span>
 </p>

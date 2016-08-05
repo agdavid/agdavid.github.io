@@ -16,7 +16,7 @@ Since my last [post](http://agdavid.github.io/2016/05/19/my_first_rails_app_alle
 I've always known that JavaScript was the means to create dynamic front-ends, but this was a great chance to apply my JS skills and see them in action.  Through this process I was able to render index and show pages via jQuery without a page refresh, create JSON responses using Active Model Serializers (AMS), and translate those JSON responses into JS Model Objects which included methods on the prototype.
 
 **Generating List of a User's Recipes on the Show Page**
-From a user's profile page, I thought that generating a list of that user's recipes was a logical functionality to expect.
+Aside from generating the comments index via jQuery (as seen in the video above), I also added a similar feature to generate the recipes index.  From a user's profile page, I thought that generating a list of that user's recipes was a logical functionality to expect.  Below is some of my code.
 
 *Adding JS Hooks to User's Show Page* First, I created the link with a class of 'js-showUserRecipes' which, when clicked, would trigger the AJAX request:
 

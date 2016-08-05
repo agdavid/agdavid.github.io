@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Rails, JSON and Active Model Serializers - Adding a jQuery Front End
+title:  Adding a jQuery Front End and JSON API Back End
 date:   2016-08-03 20:49:05 -0400
 ---
 

@@ -106,13 +106,15 @@ We expected the following template...
 <div ng-transclude></div>
 ```
 
-plus, the below initial HTML inside the '<outer-directive>'' element inserted at ng-transclude...
+plus, the below initial HTML inside the '<outer-directive>' element inserted at ng-transclude...
+
 ```
     This will be transcluded into the template of the outerDirective directive.
     <inner-directive title="InnerDirective Template">
       This will be transcluded into the template of the innerDirective directive.
     </inner-directive> 
 ```
+
 resulting in...
 
 

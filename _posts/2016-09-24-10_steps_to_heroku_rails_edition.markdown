@@ -6,6 +6,8 @@ date:   2016-09-24 13:58:33 -0400
 
 Hi there! Let's get your Rails application up and running on Heroku in 10 steps!
 
+**Want to deploy in Sinatra?** Read my post [here](http://agdavid.github.io/2016/05/05/10_steps_to_heroku_letting_your_sinatra_app_sing_in_sqlite3_and_postgresql/).
+
 As developers, we spend a lot of time coding in our text editor.  But the way the world interacts with our code is through live applications.  What better way to showcase your work than letting it shine on Heroku. 
 
 **10 Steps to Deploying on Heroku**

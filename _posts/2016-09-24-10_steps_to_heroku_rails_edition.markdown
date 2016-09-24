@@ -155,7 +155,7 @@ heroku config
 
 Read more about this on the [Heroku Dev Center](https://devcenter.heroku.com/articles/config-vars).
 
-10) ** Check Out Your App Live! **
+10) **Check Out Your App Live!**
 
 The moment you've been waiting for. Let's check out your live app!
 

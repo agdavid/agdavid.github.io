@@ -53,6 +53,8 @@ group :production do
   gem 'rails_12factor'  
 end
 ```
+
+Read more about the 12 factor gem [here](https://github.com/heroku/rails_12factor).
  
 3) **Modify config/database.yml File**
 
@@ -110,13 +112,13 @@ heroku run rake db:seed
 
 8) **Update OAuth Domains and Callbacks**
 
-Note: This step only applies to you if you use any third-party authentication, such as OAuth for Facebook.
+*Note: This step only applies to you if you use any third-party authentication, such as OAuth for Facebook.*
 
-In development, I used my local server and whitelisted both the domain (http://localhost:3000) and callback (http://localhost:3000/users/auth/facebook/callback) on [Facebook](https://developers.facebook.com/).
+In development, I used my local server and whitelisted on [Facebook](https://developers.facebook.com/) both the domain (http://localhost:3000) and callback (http://localhost:3000/users/auth/facebook/callback).
 
 With your app live on Heroku you need to update these, otherwise your "Login with Facebook" button won't work.
 
-In my app on the Facebook developer site, navigate to Settings > Basic and update your "App Domain". Mine changed to: 
+In your app page on the Facebook developer site, navigate to Settings > Basic and update your "App Domain". Mine changed to: 
 
 ```
 https://allergyfreemeals.herokuapp.com/
@@ -130,11 +132,11 @@ https://allergyfreemeals.herokuapp.com/users/auth/facebook/callback
 
 9) **Add OAuth Keys and Secrets to ENV**
 
-Note: Again, this step only applies to you if you use any third-party authentication, such as OAuth for Facebook.
+*Note: Again, this step only applies to you if you use any third-party authentication, such as OAuth for Facebook.*
 
 We already know that registering your app with a provider like Facebook, Github, or Google provides you with identifiers like an 'app key' or 'app secret'.
 
-Assuming you used key-value pairs ENV['<INSERT_KEY/SECRET_NAME>'], as any safe programmer does (!), we need to set those in our Heroku app.
+Assuming you used key-value pairs ENV['<INSERT_KEY/SECRET_NAME>'], we need to set those in our Heroku app.
 
 I called my Facebook identifiers ENV['FACEBOOK_KEY'] and ENV['FACEBOOK_SECRET'] and set them as follows:
 
@@ -163,6 +165,6 @@ Email the URL to everyone you know!
 
 
 For those interested in reviewing or comparing code:
-- Heroku live app: [AllergyFreeMeals](https://allergyfreemeals.herokuapp.com/)
-- Git repo: [Original SQLite3 version](https://github.com/agdavid/allergy-free-meals-rails-application)
-- Git repo: [Heroku PostgreSQL version](https://github.com/agdavid/allergy-free-meals-rails-application-heroku)
+*Heroku live app: [AllergyFreeMeals](https://allergyfreemeals.herokuapp.com/)
+*Git repo: [Original SQLite3 version](https://github.com/agdavid/allergy-free-meals-rails-application)
+*Git repo: [Heroku PostgreSQL version](https://github.com/agdavid/allergy-free-meals-rails-application-heroku)

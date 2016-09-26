@@ -6,17 +6,19 @@ date:   2016-09-26 13:58:33 -0400
 
 If a picture is worth a thousand words, let's make sure your Heroku-deployed app can actually save and load images using our three friends: Heroku, Paperclip and Amazon S3!
 
+*Note: This post deals with integrating Amazon S3 into an app that already uses Paperclip. Learn how to use Paperclip with your Rails models [here](https://github.com/thoughtbot/paperclip) -- the documentation is awesome!* 
+
 Working locally is a breeze.  You use the Paperclip gem and your photos magically appear on your development application hosted on the local server.
 
 Working on Heroku is a little different.  If you try to load an image, it works -- for about 24 hours and then disappears.  Why? Heroku doesn't want to be a free cloud storage service for you.
 
-**You need to use Amazon S3 (Simple Storage Service) together with your Heroku app and Paperclip gem**
+**For the win, you need to use [Amazon S3 (Simple Storage Service)](https://aws.amazon.com/s3/) together with your Heroku app and Paperclip gem.**
 
 Let's do this now!
 
 1) **Create Your Amazon S3 Account**
 
-It's free and easy. Sign up for [Amazon Web Services Here](https://aws.amazon.com/free/). 
+It's free and easy. Sign up for [Amazon Web Services here](https://aws.amazon.com/free/). 
 
 2) **Establish Your Amazon S3 Credentials**
 
@@ -38,7 +40,7 @@ In the upper left, naviage to the dropdown under "Services" > "S3".  Click on th
 
 You need to add the Amazon Web Services gem to your Gemfile.
 
-After trial and error, there were issues with my dependencies and I had to specify versions of the Paperclip, Postgres and Amazon Web Services gems:
+After trial and error, there were issues with my dependencies and I had to specify versions of the Paperclip, Postgres and Amazon Web Services gems, as follows:
 
 ```
 gem 'paperclip', '4.3.6'
@@ -79,7 +81,7 @@ Easy and standard (and perhaps you have already committed many times before this
   git commit -m “<your message>” 
 ```
 
-7) **Set More Heroku ENV variables**
+7) **Set Heroku ENV variables**
 
 As always, you don't want your credentials in your git repos.  This is why we use the ENV hash and set our actual values to named keys!
 
@@ -107,12 +109,12 @@ In your top-level directory, push your entire application to Heroku by entering 
 git push heroku master
 ```
 
-10) **Check Out Your App Live!**
+9) **Check Out Your App Live!**
 
-The moment you've been waiting for. Let's check out your live app again -- now with image-saving functionality!
+Let's check out your live app again -- now with image-saving functionality!
 
 ```
 heroku open
 ```
 
-I welcome any questions or concerns.  Please feel free to contact me at antonio.david.us@gmail.com!
+I welcome any questions or concerns.  Please feel free to contact me at antonio.david.us@gmail.com. Happy coding!

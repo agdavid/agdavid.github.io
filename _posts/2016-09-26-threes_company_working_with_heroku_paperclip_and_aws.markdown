@@ -117,4 +117,6 @@ Let's check out your live app again -- now with image-saving functionality!
 heroku open
 ```
 
+Here is the live [AllergyFreeMeals](https://allergyfreemeals.herokuapp.com/) app. Here is the [GitHub](https://github.com/agdavid/allergy-free-meals-rails-application-heroku) repo.
+
 I welcome any questions or concerns.  Please feel free to contact me at antonio.david.us@gmail.com. Happy coding!

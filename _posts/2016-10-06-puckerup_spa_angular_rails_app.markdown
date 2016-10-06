@@ -35,7 +35,8 @@ class State < ApplicationRecord
     has_many :breweries, dependent: :destroy
 end
 ```
-*Why the 'optional: true' for a Brewery?*  
+*Why the 'optional: true' for a Brewery?*
+
 Rails 5 made the 'belongs_to' association required by default. You can find this in the initializer:
 
 ```
@@ -48,6 +49,7 @@ This means that if the associated record has not been instantiated prior to inst
 You can make this relationship optional.  I chose to do that on my model by adding 'optional: true'.
 
 *Dealing with Cross Site Request Forgery*
+
 When working with Angular and Rails, you need to address the possibility of cross site request forgery (CSRF) attacks.  In general, CSRF is whan an attacker tricks the browser of a verified user into attacking a website that relies on user-authentication for certain requests.  A user that saves some verification to the browser (i.e., a cookie) could unknowingly send a malicious HTTP request toa site that trusts the user. Read more about CSRF, generally, [here](https://en.wikipedia.org/wiki/Cross-site_request_forgery).
 
 The Rails-community-solution to protecting your API is to circularly pass an identifier (in this case called the 'CSRF token') into the cookie of each request received, then have the frontend send the same token back to Rails on each subsequent request, as verification. 
@@ -69,20 +71,55 @@ class ApplicationController << ActionController::Base
 
     #Angular sends back the cookie with the key 'X-XSRF-TOKEN'
     #but Rails is looking for a key named 'X-CSRF-TOKEN'
+    #the below informs Rails that 'X-XSRF-TOKEN' is still OK
     protected
-    #the below informs Rails that 'X-XSRF-TOKEN' is still satisfactory verification
         def verified_request?
             super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
         end
 end
 
-#in your Angular root module
+//in your Angular root module
+//passback the cookie on $http requests in the headers
   angular
       .module('app', [])
       .config(function($httpProvider) {
-          //passback the cookie on $http requests in the headers
           $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
       });
+
+```
+
+*User Authentication*
+
+In the Rails context, we have grown accustomed to using the [Devise gem](https://github.com/plataformatec/devise) for our go-to authentication needs.  In the context of our SPA, we are once again met with the challenge of bridging the gap between the Angular front and Rails API.
+
+[Angular-Devise](https://github.com/cloudspace/angular_devise) comes to the rescue as our means to authenticate users in conjunction with the Devise gem.  Overall, once implemented, Angular-Devise provides a suite of helper methods to help you determine whether a 'user' is logged in.  
+
+For example, I leveraged the Auth.isAuthenticated() method to determine whether I should show the "Add Brewery" link to a general user, and whether I should show the "Edit Brewery" and "Delete Brewery" links to an admin user".
+
+It was alse key to denying access to features and redirecting.  Here is how it looked in my controller for redirecting a user who wanted to create a Brewery:
+
+```
+function BreweriesController(BreweryFactory, $filter, $state, Auth) {
+        var vm = this;
+        ...
+        vm.signedIn = Auth.isAuthenticated();
+
+        ...
+        function createBrewery() {
+            //if returns 'true' for user logged in
+            if (vm.signedIn) {
+                return BreweryFactory.createBrewery(vm.brewery)
+                       .then(showBrewery)
+            } else {
+                //deny access and send to log in page
+                alert("Whoops. You need to be signed in to create a Brewery.");
+                $state.go('home.login')
+            }
+        };
+        ...
+
+};
+...
 
 ```
 

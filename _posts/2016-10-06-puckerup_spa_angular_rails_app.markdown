@@ -50,7 +50,9 @@ You can make this relationship optional.  I chose to do that on my model by addi
 
 *Dealing with Cross Site Request Forgery*
 
-When working with Angular and Rails, you need to address the possibility of cross site request forgery (CSRF) attacks.  In general, CSRF is whan an attacker tricks the browser of a verified user into attacking a website that relies on user-authentication for certain requests.  A user that saves some verification to the browser (i.e., a cookie) could unknowingly send a malicious HTTP request toa site that trusts the user. Read more about CSRF, generally, [here](https://en.wikipedia.org/wiki/Cross-site_request_forgery).
+When working with Angular and Rails, you need to address the possibility of cross site request forgery (CSRF) attacks.  In general, CSRF is whan an attacker tricks the browser of a verified user into attacking a website that relies on user-authentication for certain requests.  A user that saves some verification to the browser (i.e., a cookie) could unknowingly send a malicious HTTP request toa site that trusts the user. 
+
+Read more about CSRF, generally, [here](https://en.wikipedia.org/wiki/Cross-site_request_forgery).
 
 The Rails-community-solution to protecting your API is to circularly pass an identifier (in this case called the 'CSRF token') into the cookie of each request received, then have the frontend send the same token back to Rails on each subsequent request, as verification. 
 
@@ -127,7 +129,9 @@ For anyone who wants to learn how to use Angular-Devise in conjunction with Devi
 
 *The Power of the Ui-Router Module*
 
-The third-party created [ui-router]() is an incredible module that provided the superpower to easily nest routes and link to pages via easily named 'states' in order to create a SPA.  It clobbers the homemade AngularJS ngRoute module and definitely merits its self-described: "de-facto solution to flexible routing with nested views in AngularJS"
+The third-party created [ui-router]() is an incredible module that provided the superpower to easily nest routes and link to pages via easily named 'states' in order to create a SPA.  
+
+It clobbers the homemade AngularJS ngRoute module and definitely merits its self-described: "de-facto solution to flexible routing with nested views in AngularJS"
 
 Simply by injecting the dependency into my root module, I was able to create 9 states all nested under a main 'home' state.  The nested routes could be easily referenced by names such as 'home.breweries' or 'home.map'.
 

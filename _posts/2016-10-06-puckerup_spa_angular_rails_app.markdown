@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  PuckerUp - My SPA Built With AngularJS and a Rails API
+title:  PuckerUp - My Homebrewed SPA Built With AngularJS and a Rails API
 date:   2016-10-06 20:49:05 -0400
 ---
 
@@ -88,7 +88,7 @@ end
 
 ```
 
-*User Authentication*
+*User Authentication With Angular-Devise + Devise*
 
 In the Rails context, we have grown accustomed to using the [Devise gem](https://github.com/plataformatec/devise) for our go-to authentication needs.  In the context of our SPA, we are once again met with the challenge of bridging the gap between the Angular front and Rails API.
 
@@ -122,6 +122,46 @@ function BreweriesController(BreweryFactory, $filter, $state, Auth) {
 ...
 
 ```
+
+For anyone who wants to learn how to use Angular-Devise in conjunction with Devise, read the documentation and this great [tutorial](https://thinkster.io/angular-rails#adding-user-authentication-with-devise).
+
+*The Power of the Ui-Router Module*
+
+The third-party created [ui-router]() is an incredible module that provided the superpower to easily nest routes and link to pages via easily named 'states' in order to create a SPA.  It clobbers the homemade AngularJS ngRoute module and definitely merits its self-described: "de-facto solution to flexible routing with nested views in AngularJS"
+
+Simply by injecting the dependency into my root module, I was able to create 9 states all nested under a main 'home' state.  The nested routes could be easily referenced by names such as 'home.breweries' or 'home.map'.
+
+With Rails-like efficiency, ui-router also conforms to RESTful architecture and permits states to have variable params so that one single state can act as the route for an unlimited number of SHOW or EDIT pages.
+
+This is how I passed a variable param to my state, and how it was received by ui-router:
+
+```
+//in the Angular root module
+  angular
+      .module('app')
+      .config(function($stateProvider, $urlRouterProvider){
+          $stateProvider
+          ...
+          //here you see the variable :breweryId
+          .state('home.show', {
+            url: 'breweries/show/:breweryId',
+            templateUrl: 'breweries/show.html',
+            controller: 'BreweriesShowController as breweriesShowCtrl'
+          });
+          ...
+        });
+
+#in my html view, passing an actual value to the param 
+<tr ng-repeat="brewery in breweriesCtrl.filteredList track by brewery.id">
+    <td><a class="brewery-link" href="" ui-sref="home.show({ breweryId: brewery.id })">{{ brewery.name }}</a></td>
+    ...
+</tr>
+```  
+
+It was a really amazing experience to build this application because it was the culmination of learning Ruby, Ruby on Rails, ORM, JavaScript, Angular, HTML and CSS.  **With this application, I am a Full Stack Developer and am excited to continue engineering great applications.**
+
+If interested, check out the [Github repo for PuckerUp](https://github.com/agdavid/pucker-up-angular-rails-application).  Happy coding!
+
 
 
 

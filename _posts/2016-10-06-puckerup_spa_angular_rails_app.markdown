@@ -15,8 +15,36 @@ Learning AngularJS was amazing, plain and simple.  It was incredible to finally 
 
 But let's get into the project.
 
-# Idea
-PuckerUp is my latest application and it's a SPA! It brings together my excitement for AngularJS, Rails and sour beers.  The goal of PuckerUp is to provide users with the ultimate, crowd-sourced list of sour beer breweries across the USA.  Everywhere you go, PuckerUp will help you locate your next sour brew.
+**Idea** PuckerUp is my latest application and it's a SPA! It brings together my excitement for AngularJS, Rails and sour beers.  The goal of PuckerUp is to provide users with the ultimate, crowd-sourced list of sour beer breweries across the USA.  Everywhere you go, PuckerUp will help you locate your next sour brew.
+
+For the quick overview, please enjoy my video walkthrough above.  More detailed discussion of architecting the application is below.  Enjoy!
+
+
+**Design** In terms of design, PuckerUp is the marriage between two standalone components: (1) the Rails API backend; and (2) the AngularJS frontend.
+
+The Rails API is a lean and mean database that provides JSON when needed.  The ORM includes the following key relationships:
+
+```
+class Brewery < ApplicationRecord
+    belongs_to :state, optional: true
+end
+
+class State < ApplicationRecord
+    has_many :breweries, dependent: :destroy
+end
+```
+*Why the 'optional: true' for a Brewery?*  Rails 5 made the 'belongs_to' association required by default. You can find this in the initializer:
+
+```
+#config/initializers/active_record_belongs_to_required_by_default.rb
+Rails.application.config.active_record.belongs_to_required_by_default = true
+```
+
+This means that if the associated record has not been instantiated prior to instantiating the primary record, Rails will not persist the primary record to the database.  In my scenario, since a Brewery belongs_to a State, the State had to exist before instantiating the Brewery, otherwise ActiveRecord would rollback the database insertion.
+
+You can make this relationship optional.  I chose to do that on my model by adding 'optional: true'.
+
+
 
 My first Rails application is AllergyFree Meals (AFM), a web application that helps you find delicious and healthy recipes contributed by a community of allergy-conscious users.  All code is publicly available at [GitHub](https://github.com/agdavid/allergy-free-meals-rails-application).  Checkout a video walkthrough of AFM above, and overview of the development process below. Enjoy!
 

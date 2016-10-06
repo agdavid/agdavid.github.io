@@ -15,7 +15,7 @@ Learning AngularJS was amazing, plain and simple.  It was incredible to finally 
 
 But let's get into the project.
 
-## Idea
+# Idea
 PuckerUp is my latest application and it's a SPA! It brings together my excitement for AngularJS, Rails and sour beers.  The goal of PuckerUp is to provide users with the ultimate, crowd-sourced list of sour beer breweries across the USA.  Everywhere you go, PuckerUp will help you locate your next sour brew.
 
 My first Rails application is AllergyFree Meals (AFM), a web application that helps you find delicious and healthy recipes contributed by a community of allergy-conscious users.  All code is publicly available at [GitHub](https://github.com/agdavid/allergy-free-meals-rails-application).  Checkout a video walkthrough of AFM above, and overview of the development process below. Enjoy!

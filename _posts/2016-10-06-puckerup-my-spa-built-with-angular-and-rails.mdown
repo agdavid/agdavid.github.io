@@ -4,4 +4,19 @@ title:  PuckerUp - My SPA Built With AngularJS and a Rails API
 date:   2016-10-06 13:58:33 -0400
 ---
 
-DRAFT IN PROCESS.
+<p>
+  <span style="text-align:center; display: block;">
+    <iframe type="text/html" width="682" height="414" src="https://www.youtube.com/embed/9N_rNwhFwl0?version=1&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;">
+    </iframe>
+  </span>
+</p>
+
+Learning AngularJS (1.X that is, I'll learn Angular2 soon!) was awesome, plain and simple.  It was incredible to finally see how you could plan out and engineer a single-page application(SPA) with a dynamic AngularJS frontend that communicates with a Rails API backend.
+
+PuckerUp is my latest application and it's a SPA! It brings together my excitement for AngularJS, Rails and sour beers.  The goal of PuckerUp is to provide users with the ultimate, crowd-sourced list of sour beer breweries across the USA.  Everywhere you go, PuckerUp will help you locate your next sour brew.
+
+For the quick overview, please enjoy my video walkthrough above.  More technical discussion of architecting the application is below.  Enjoy!
+
+In terms of technical
+
+

@@ -50,7 +50,7 @@ You can make this relationship optional.  I chose to do that on my model by addi
 
 *Dealing with Cross Site Request Forgery*
 
-When working with Angular and Rails, you need to address the possibility of cross site request forgery (CSRF) attacks.  In general, CSRF is whan an attacker tricks the browser of a verified user into attacking a website that relies on user-authentication for certain requests.  A user that saves some verification to the browser (i.e., a cookie) could unknowingly send a malicious HTTP request toa site that trusts the user. 
+When working with Angular and Rails, you need to address the possibility of cross site request forgery (CSRF) attacks.  In general, CSRF is whan an attacker tricks the browser of a verified user into attacking a website that relies on user-authentication for certain requests.  A user that saves some verification to the browser (i.e., a cookie) could unknowingly send a malicious HTTP request to a site that trusts the user. 
 
 Read more about CSRF, generally, [here](https://en.wikipedia.org/wiki/Cross-site_request_forgery).
 
@@ -129,7 +129,7 @@ For anyone who wants to learn how to use Angular-Devise in conjunction with Devi
 
 *The Power of the Ui-Router Module*
 
-The third-party created [ui-router]() is an incredible module that provided the superpower to easily nest routes and link to pages via easily named 'states' in order to create a SPA.  
+The third-party created [ui-router](https://github.com/angular-ui/ui-router) is an incredible module that provided the superpower to easily nest routes and link to pages via easily named 'states' in order to create a SPA.  
 
 It clobbers the homemade AngularJS ngRoute module and definitely merits its self-described: "de-facto solution to flexible routing with nested views in AngularJS"
 
@@ -162,9 +162,11 @@ This is how I passed a variable param to my state, and how it was received by ui
 </tr>
 ```  
 
-It was a really amazing experience to build this application because it was the culmination of learning Ruby, Ruby on Rails, ORM, JavaScript, Angular, HTML and CSS.  **With this application, I am a Full Stack Developer and am excited to continue engineering great applications.**
+It was a really amazing experience to build this application because it was the culmination of learning Ruby, Ruby on Rails, ORM, JavaScript, Angular, HTML and CSS.  **With this application, I was excited to truly work as a Full Stack Software Engineer and am excited to continue engineering great applications!**
 
-If interested, check out the [Github repo for PuckerUp](https://github.com/agdavid/pucker-up-angular-rails-application).  Happy coding!
+If interested in learning more about PuckerUp, check out the [live app on Heroku](https://puckerup.herokuapp.com/) or my [Github](https://github.com/agdavid/pucker-up-angular-rails-application).  
+
+Until next time - Dream. Design. Develop.
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Beginner Dataviz Lesson - GoogleMaps JavaScript API and Rails
+title:  GoogleMaps JavaScript API and Rails - Part 1 of 3
 date:   2016-10-14 20:49:05 -0400
 ---
 

@@ -66,6 +66,27 @@ end
   end
 ```
 
+*Seeds*
+
+As an added bonus, why not make a seed file with some sample coordinates that you can work with. Here are a few coordinates in the Atlanta region that you can work with:
+
+```
+#db/seeds.rb
+
+Coordinate.create([
+  {
+    lat: "33.45115165",
+    lng: "-84.47746155"
+  },
+    {
+    lat: "34.04145679",
+    lng: "-84.06980447"
+  }
+])
+```
+
+Don't forget to migrate your data base and seed your data!
+
 Now, remember again that data is sent across the internet in string format.  This is where ActiveModelSerializers come in -- helping us serialize our data so that you can call on the API endpoint (coordinates#index) and recieve JSON.
 
 Go ahead and add the proper gem to your Gemfile and rebundle:

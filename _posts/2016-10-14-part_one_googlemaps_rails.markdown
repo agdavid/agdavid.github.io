@@ -10,7 +10,7 @@ This post will have three main parts: (1) saving mapping data to your Rails back
 
 Let's get started!
 
-**Part I: Saving Mapping Data to Your Rails Back-End:**
+**Part I: Saving Mapping Data to Your Rails Back-End**
 
 To plot a coordinate with the GoogleMaps API you'll need both a latitude and longitude.  
 

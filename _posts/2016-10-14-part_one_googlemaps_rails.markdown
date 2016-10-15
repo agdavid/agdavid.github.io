@@ -19,6 +19,7 @@ At first glance, you might think: Coordinates are numbers with trailing decimals
 The latitude and longitude should be saved as string datatype, containing however many decimals you would like to retain.  This results in the following for your coordinates:
 
 *Migration File*
+
 ```
 # db/migrate/<crazy_rails_number>_create_coordinates.rb
 
@@ -32,10 +33,10 @@ class CreateCoordinates < ActiveRecord::Migration[5.0]
     end
   end
 end
-
 ```
 
 *Routes*
+
 ```
 # config/routes.rb
 ...
@@ -44,6 +45,7 @@ resources :coordinates, only: [:index]
 ```
 
 *Model*
+
 ```
 # models/coordinate.rb
 class Coordinate < ApplicationRecord
@@ -51,6 +53,7 @@ end
 ```
 
 *Controller*
+
 ```
 # controllers/coordinates_controller.rb
   def index
@@ -64,6 +67,7 @@ end
 Now, remember again that data is sent across the internet in string format.  This is where ActiveModelSerializers come in -- helping us serialize our data so that you can call on the API (coordinates#index) and recieve JSON.
 
 Go ahead and add the proper gem to your Gemfile and rebundle:
+
 ```
 # Gemfile
 ...
@@ -71,6 +75,7 @@ gem 'active_model_serializers'
 ```
 
 Generate a serializer for our coordinates with the generator, by running in terminal:
+
 ```
 rails g serializer coordinate
 ```
@@ -83,6 +88,7 @@ class CoordinateSerializer < ActiveModel::Serializer
   attributes :id
 end
 ```
+
 The generated file automatically includes the id of your instance.  We want to include the other attributes in our serialized data so type in the ":lat" and ":lng".  The final file should look like:
 
 ```
@@ -96,6 +102,7 @@ Go ahead and start up your Rails server...
 ```
 rails s
 ``` 
+
 ... and navigate to localhost:3000/coordinates.json . You should get something rendered in your browser like this:
 
 ```
@@ -119,6 +126,8 @@ rails s
 ]
 ```
 
-Voila!  At this point, you have a fully-functional Rails API.  Calls to the API endpoint 'localhost:3000/coordinates.json' will be served serialized coordinates as data.
+Voila!  
 
-Coming Up: Part 2 - Using AJAX to Retrieve Data in the Front-End  
+At this point, you have a fully-functional Rails API.  Calls to the API endpoint 'localhost:3000/coordinates.json' will be served serialized coordinates as data.
+
+**Coming Up: Part 2 - Using AJAX to Retrieve Data in the Front-End**  

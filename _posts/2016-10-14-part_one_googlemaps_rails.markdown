@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  GoogleMaps JavaScript API and Rails - Part 1 of 3
+title:  Easy Rails Datavisualization - GoogleMaps JavaScript API (Part 1 of 3)
 date:   2016-10-14 20:49:05 -0400
 ---
 
